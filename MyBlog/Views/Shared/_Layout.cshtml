@@ -15,7 +15,8 @@
     <!-- Bootstrap core CSS -->
 
     <link href="~/Content/templatemo-stand-blog.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="~/Content/fontawesome.css" rel="stylesheet" />
     
@@ -35,12 +36,12 @@
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><h2>Stand Blog<em>.</em></h2></a>
+                <a class="navbar-brand" href="index.html"><h2>SB<em>.</em></h2></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav" style="margin-left:auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">
                                 Home
@@ -68,7 +69,7 @@
 
 
     <section class="blog-posts">
-        @RenderBody()
+
         <div class="container">
             <div class="jumbotron">
                 <h1 class="display-4">Hello, world!</h1>
@@ -77,6 +78,8 @@
                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </div>
+
+            @RenderBody()
             <div class="row">
                 <div class="col-lg-8">
                     <div class="all-blog-posts">
@@ -198,6 +201,30 @@
                     <div class="sidebar">
                         <div class="row">
                             <div class="col-lg-12">
+                                
+                                <div class="profile-area">
+                                    <div class="container">
+                                        <div class="col-md-12">
+                                            <div class="img1"><img src="~/imgs/a1.jpg" /></div>
+                                            <div class="img2"><img src="~/imgs/1.jpeg" /></div>
+                                            <div class="main-text">
+                                                <h2>Safa BAL</h2>
+                                                <p>Loremasfka sfaskfaskfaskfasf asfkas asfasf kafsa afskfakfkasf asfkasf kasfkkaskfas asfk askfkasfkaskfasfkasfkaskfa afskfask fas kafk asfk afskasfkkasf afsa asf.</p>
+                                            </div>
+                                            <div class="socials">
+                                                <i class="fa fa-facebook"></i>
+                                                <i class="fa fa-linkedin"></i>
+                                                <i class="fa fa-twitter"></i>
+                                                <i class="fa fa-youtube"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-lg-12">
                                 <div class="sidebar-item search">
                                     <form id="search_form" name="gs" method="GET" action="#">
                                         <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
@@ -302,26 +329,18 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
-
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script language="text/Javascript">
 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
     </script>
 
 </body>

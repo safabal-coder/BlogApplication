@@ -144,6 +144,8 @@
     <Content Include="html_Design\contact.html" />
     <Content Include="html_Design\index.html" />
     <Content Include="html_Design\post-details.html" />
+    <Content Include="imgs\1.jpeg" />
+    <Content Include="imgs\a1.jpg" />
     <Content Include="Scripts\accordions.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
