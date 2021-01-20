@@ -12,8 +12,10 @@ https://templatemo.com/tm-551-stand-blog
 
 }
 
-.card {
 
+
+.card {
+	border:5px solid;
 	box-shadow: 0 0 30px rgba(0,0,0,0.5);
 	overflow:hidden;
 	border-radius:15px;
@@ -39,7 +41,39 @@ https://templatemo.com/tm-551-stand-blog
 	margin-top: -80px;
 }
 
+.card:hover .img2 img {
 
+	border-color: darkcyan;
+	transition: .7s;
+}
+
+.main-text {
+	padding:30px 0;
+	text-align:center;
+}
+
+.main-text h2 {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size:20px;
+	margin: 0 0 20px;
+}
+
+.main-text p {
+	font-size: 16px;
+	padding: 0 35px;
+}
+
+.socials {
+	text-align:center;
+	padding-bottom:20px;
+}
+
+.socials i {
+	font-size:20px;
+	color:darkcyan;
+	padding: 0 10px;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
