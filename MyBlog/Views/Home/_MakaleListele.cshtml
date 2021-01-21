@@ -1,0 +1,68 @@
+﻿@model IEnumerable<MyBlog.tbl_makale>
+    
+@helper IcerikKisalt(string metin) { 
+
+
+if (metin.Length>300)
+{
+        <p>
+            @metin.Substring(0,300)
+        </p>
+}
+else
+{
+    <p>
+        @metin
+    </p>
+}
+    }
+
+
+
+    <div class="col-lg-8">
+        <div class="all-blog-posts">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-12">
+                        <div class="blog-post">
+                            <div class="blog-thumb">
+                                <img src="assets/images/blog-post-01.jpg" alt="">
+                            </div>
+                            <div class="down-content">
+                                <span>Lifestyle</span>
+                                <a href="post-details.html"><h4>@item.Baslik</h4></a>
+                                <ul class="post-info">
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">@item.EklenmeTarihi.ToShortDateString()</a></li>
+                                    <li><a href="#">@item.tbl_yorum.Count</a></li>
+                                </ul>
+                                <p>@IcerikKisalt(item.Icerik)</p>
+                                <div class="post-options">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <ul class="post-tags">
+                                                <li><i class="fa fa-tags"></i></li>
+                                                <li><a href="#">Beauty</a>,</li>
+                                                <li><a href="#">Nature</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="post-share">
+                                                <li><i class="fa fa-share-alt"></i></li>
+                                                <li><a href="#">Facebook</a>,</li>
+                                                <li><a href="#"> Twitter</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+            </div>
+        </div>
+    </div>
