@@ -8,7 +8,7 @@ using System.Web.UI.WebControls.WebParts;
 namespace MyBlog.Controllers
 {
 
-
+    using App_Classes;
 
     public class HomeController : Controller
     {
@@ -24,6 +24,12 @@ namespace MyBlog.Controllers
         {
             return PartialView(context.tbl_makale.ToList());
 
+        }
+
+        public PartialViewResult PopulerMakalelerWidget()
+        {
+            var model = context.tbl_makale.OrderByDescending(x => x.EklenmeTarihi).Take(3).ToList();
+            return PartialView(model); 
         }
 
 

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MyBlog.tbl_makale>
+
+
+
+<div class="content">
+    <ul>
+
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="#">
+                    <h5>@item.Baslik</h5>
+                    <span>@item.EklenmeTarihi.ToShortDateString() @item.tbl_yorum.Count</span>
+
+                </a>
+            </li>
+
+        }
+
+    </ul>
+</div>
+
+
+
+
+

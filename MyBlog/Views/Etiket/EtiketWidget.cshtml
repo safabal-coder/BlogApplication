@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MyBlog.tbl_etiket>
+
+
+
+<div class="content">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li><a href="#">@item.Adi (@item.tbl_makale.Count)</a></li>
+        }
+    </ul>
+</div>
