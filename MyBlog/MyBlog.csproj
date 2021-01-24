@@ -243,10 +243,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Home\_MakaleListele.cshtml" />
     <Content Include="Views\Kategori\KategoriWidget.cshtml" />
     <Content Include="Views\Etiket\EtiketWidget.cshtml" />
     <Content Include="Views\Home\PopulerMakalelerWidget.cshtml" />
+    <Content Include="Views\Shared\MakaleListeleWidget.cshtml" />
+    <Content Include="Views\Kategori\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

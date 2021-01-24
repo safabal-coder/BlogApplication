@@ -17,12 +17,16 @@ namespace MyBlog.Controllers
 
         public ActionResult Index()
         {
+
             return View();
         }
 
-        public PartialViewResult _MakaleListele()
+        public ActionResult MakaleListele()
         {
-            return PartialView(context.tbl_makale.ToList());
+
+            var data = context.tbl_makale.ToList();
+
+            return View("MakaleListeleWidget", data);
 
         }
 

@@ -15,15 +15,27 @@ namespace MyBlog.Controllers
         Model1 context = new Model1();
 
 
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View();
+            
+
+            return View(id);
         }
 
 
         public PartialViewResult KategoriWidget()
         {
             return PartialView(context.tbl_kategori.ToList());
+
+        }
+
+        public ActionResult MakaleListele(int id)
+        {
+
+            var data = context.tbl_makale.Where(x => x.KategoriId == id).ToList();
+
+            return View("MakaleListeleWidget", data); 
+
 
         }
 

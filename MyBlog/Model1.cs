@@ -8,7 +8,7 @@ namespace MyBlog
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -34,9 +34,19 @@ namespace MyBlog
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<tbl_makale>()
+                .HasMany(e => e.tbl_Resim1)
+                .WithOptional(e => e.tbl_makale1)
+                .HasForeignKey(e => e.MakaleId);
+
+            modelBuilder.Entity<tbl_makale>()
                 .HasMany(e => e.tbl_yorum)
                 .WithRequired(e => e.tbl_makale)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<tbl_Resim>()
+                .HasMany(e => e.tbl_makale)
+                .WithOptional(e => e.tbl_Resim)
+                .HasForeignKey(e => e.ResimId);
 
             modelBuilder.Entity<tbl_yazar>()
                 .HasMany(e => e.tbl_makale)
