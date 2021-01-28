@@ -1,4 +1,11 @@
-﻿@model IEnumerable<MyBlog.tbl_makale>
+﻿@{ 
+
+    Layout = null; 
+
+}
+
+
+@model IEnumerable<MyBlog.tbl_makale>
 
 
 
@@ -15,8 +22,6 @@
     }
 
 }
-
-
 
 <div class="col-lg-8">
     <div class="all-blog-posts">
@@ -43,15 +48,7 @@
                                     <div class="col-6">
                                         <ul class="post-tags">
                                             <li><i class="fa fa-tags"></i></li>
-                                            <li><a href="#">Beauty</a>,</li>
-                                            <li><a href="#">Nature</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6">
-                                        <ul class="post-share">
-                                            <li><i class="fa fa-share-alt"></i></li>
-                                            <li><a href="#">Facebook</a>,</li>
-                                            <li><a href="#"> Twitter</a></li>
+                                            <li><a href="#">@item.tbl_etiket</a></li>
                                         </ul>
                                     </div>
                                 </div>

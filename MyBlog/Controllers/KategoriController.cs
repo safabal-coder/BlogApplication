@@ -16,9 +16,7 @@ namespace MyBlog.Controllers
 
 
         public ActionResult Index(int id)
-        {
-            
-
+        {            
             return View(id);
         }
 
@@ -38,6 +36,5 @@ namespace MyBlog.Controllers
 
 
         }
-
     }
 }

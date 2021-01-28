@@ -18,6 +18,7 @@ namespace MyBlog.Controllers
         public ActionResult Index()
         {
 
+
             return View();
         }
 

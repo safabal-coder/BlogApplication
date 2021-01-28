@@ -67,13 +67,14 @@
 
             <div class="row">
                 @RenderBody()
+
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="row">
                             RenderSection("Profile")
                             <div class="col-lg-12">
                                 <div class="sidebar-item search">
-                                    @RenderSection("Arama")
+                                    @RenderSection("Arama", required: false)
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -81,7 +82,7 @@
                                     <div class="sidebar-heading">
                                         <h2>Son Makaleler</h2>
                                     </div>
-                                    @RenderSection("SonMakaleler")
+                                    @RenderSection("SonMakaleler", required: false)
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -89,7 +90,7 @@
                                     <div class="sidebar-heading">
                                         <h2>Kategoriler</h2>
                                     </div>
-                                    @RenderSection("Kategoriler")
+                                    @RenderSection("Kategoriler", required: false)
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -97,7 +98,7 @@
                                     <div class="sidebar-heading">
                                         <h2>Etiketler</h2>
                                     </div>
-                                    @RenderSection("Etiketler")
+                                    @RenderSection("Etiketler", required: false)
                                 </div>
                             </div>
                         </div>
