@@ -74,7 +74,9 @@
                             RenderSection("Profile")
                             <div class="col-lg-12">
                                 <div class="sidebar-item search">
-                                    @RenderSection("Arama", required: false)
+                                    @{
+                                        Html.RenderPartial("Arama");
+                                    }
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -82,7 +84,9 @@
                                     <div class="sidebar-heading">
                                         <h2>Son Makaleler</h2>
                                     </div>
-                                    @RenderSection("SonMakaleler", required: false)
+                                    @{
+                                        Html.RenderAction("PopulerMakalelerWidget", "Home");
+                                     }
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -90,7 +94,9 @@
                                     <div class="sidebar-heading">
                                         <h2>Kategoriler</h2>
                                     </div>
-                                    @RenderSection("Kategoriler", required: false)
+                                    @{
+                                        Html.RenderAction("KategoriWidget", "Kategori");
+                                    }
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -98,7 +104,9 @@
                                     <div class="sidebar-heading">
                                         <h2>Etiketler</h2>
                                     </div>
-                                    @RenderSection("Etiketler", required: false)
+                                    @{ 
+                                        Html.RenderAction("EtiketWidget", "Etiket");
+                                    }
                                 </div>
                             </div>
                         </div>

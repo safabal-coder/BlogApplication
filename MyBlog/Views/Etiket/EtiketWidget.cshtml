@@ -6,7 +6,7 @@
     <ul>
         @foreach (var item in Model)
         {
-            <li><a href="#">@item.Adi (@item.tbl_makale.Count)</a></li>
+            <li><a href="/Etiket/Index/@item.EtiketId">@item.Adi (@item.tbl_makale.Count)</a></li>
         }
     </ul>
 </div>
